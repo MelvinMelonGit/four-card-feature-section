@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-content: center;
+    background-color: hsl(0, 0%, 98%);
+    padding: 3rem 1.2rem;
+}
+
+.heading {
+    grid-area: heading;
+    text-align: center;
+}
+
+.heading__title, .card__title {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+.heading__title {
+    margin-bottom: 1rem;
+}
+
+.heading__title__span {
+    display: block;
+    color:hsl(229, 6%, 66%);
+    font-weight: 200;
+}
+
+.heading__tagline, .card__content {
+    color:hsl(229, 6%, 66%);
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.card {
+    display: grid;
+    box-shadow: 0px 10px 20px -5px hsl(229, 6%, 66%);
+    border-radius: 0.2rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card__content {
+    margin-bottom: 2rem;
+}
+
+.card__supervisor {
+    border-top: 0.4rem solid hsl(180, 62%, 55%);
+    grid-area: supervisor;
+}
+
+.card__team-builder {
+    border-top: 0.4rem solid hsl(0, 78%, 62%);
+    grid-area: team-builder;
+}
+
+.card__karma {
+    border-top: 0.4rem solid hsl(34, 97%, 64%);
+    grid-area: karma;
+}
+
+.card__calculator {
+    border-top: 0.4rem solid hsl(212, 86%, 64%);
+    grid-area: calculator;
+}
+
+.card__img {
+    justify-self: end;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        padding: 2.2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .heading__title {
+        font-size: 2rem;
+    }
+
+    section {
+        display: grid;
+        gap: 2rem;
+        grid-template-areas:
+        "heading heading heading"
+        "supervisor team-builder calculator"
+        "supervisor karma calculator";
+        align-items: center;
+    }
+
+    .heading__tagline_span {
+        display: block;
+    }
+
+    .card {
+        margin-top: 0;
+        width: 18rem;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+
+    .card {
+        width: 22rem;
+    }
+}
